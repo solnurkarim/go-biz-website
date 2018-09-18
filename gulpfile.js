@@ -13,8 +13,8 @@ gulp.task("js", function() {
   let src = gulp.src("src/js/*.js").pipe(jsmin());
 
   let vendors = gulp.src([
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    "src/vendors/jquery-3.3.1.min.js",
+    "src/vendors/owl.carousel.min.js"
   ]);
 
   let all = combine.create();
@@ -41,7 +41,10 @@ gulp.task("css", function() {
       ])
     );
 
-  let vendors = gulp.src("node_modules/bootstrap/dist/css/bootstrap.min.css");
+  let vendors = gulp.src([
+    "src/vendors/owl.carousel.min.css",
+    "src/vendors/owl.theme.default.min.css"
+  ]);
 
   let all = combine.create();
   all.append(vendors);
