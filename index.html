@@ -9,43 +9,82 @@
 </head>
 
 <body>
-    <div id="feature-panel">
-        <div id="brand"></div>
-        <div id="location"></div>
-        <div id="weather"></div>
+    <div class="feature-panel">
+        <div id="brand">
+            <img src="./images/logo.png" alt="логотип">
+        </div>
+        <div id="location">
+            <img src="./images/icons/psd-imageslayer_350.png" alt="регион">
+            <div id="location-region">
+                Петропавловск
+            </div>
+        </div>
+        <div id="weather">
+            <img src="./images/icons/psd-imageslayer_348.png" alt="погода">
+            <div id="weather-show">
+                +17*C
+            </div>
+        </div>
         <div id="currency">
-            <div id="usd"></div>
-            <div id="eur"></div>
-            <div id="rub"></div>
+            <div id="usd">
+                <img src="./images/icons/usd.png" alt="доллар">
+                <div id="usd-show">372</div>
+            </div>
+            <div id="eur">
+                <img src="./images/icons/eur.png" alt="евро">
+                <div id="eur-show">235</div>
+            </div>
+            <div id="rub">
+                <img src="./images/icons/rub.png" alt="рубль">
+                <div id="rub-show">2.35</div>
+            </div>
         </div>
         <div id="search">
-            <input type="search">
-            <div id="marnifier"></div>
+            <input type="search" id="search-input" placeholder="Найти...">
+            <button type="submit" id="search-submit"></button>
+            <!-- <img src="./images/icons/psd-imageslayer_351.png" alt="лупа"> -->
         </div>
-        <div id="languages">
-            <div>Рус</div>
-            <div>Каз</div>
+        <div id="language">
+            <div id="rus" class="language-active">Рус</div>
+            <div id="kaz">Каз</div>
         </div>
         <div id="auth">
             <div id="auth-img"></div>
-            <div id="auth-name"></div>
+            <div id="auth-name">Данияр Каирбеков</div>
             <div id="auth-settings"></div>
             <div id="auth-logout"></div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
-            </div>
+    <nav class="nav">
+        <div class="nav-grid">
+            <a class="nav-btn active" href="#"><span>Главная</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Бизнес новости</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Каталог франшиз</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Каталог компаний</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Помещения, коворкинг и др.</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Продажа бизнесов</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Полезное</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Обучение</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>Продажа договоров</span></a>
+        </div>
+        <div class="nav-grid">
+            <a class="nav-btn" href="#"><span>4web</span></a>
         </div>
     </nav>
 
