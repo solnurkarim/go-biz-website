@@ -1,0 +1,97 @@
+.main-right {
+  padding: 30px 30px 0 30px;
+  font-size: 0.8em;
+
+  .adds-right {
+    max-height: 500px;
+
+    .adds-marker {
+      text-align: right;
+      opacity: 0.7;
+      letter-spacing: 0.5px;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post,
+  .new-comments {
+    .title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 20px 0 10px 0;
+    }
+  }
+
+  .post {
+    .desc-wrapper {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      .desc {
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.2em;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.561);
+
+        .post-link {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        max-height: 300px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .new-comments {
+    .comment {
+      margin-bottom: 15px;
+
+      header {
+        display: flex;
+        align-items: center;
+
+        .comment-user {
+          font-size: 1.2em;
+          font-weight: 700;
+        }
+
+        .comment-posted:before {
+          content: url(../images/icons/watches.png);
+          margin-right: 3px;
+        }
+      }
+
+      .comment-photo {
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 0 2px #000;
+        margin-right: 10px;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    .from-post {
+      font-weight: 600;
+      font-size: 1.15em;
+
+      &-link {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

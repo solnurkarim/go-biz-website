@@ -13,11 +13,12 @@
     "browser-sync": "^2.24.7",
     "combined-stream": "^1.0.6",
     "gulp": "^3.9.1",
+    "gulp-babel-minify": "^0.4.3",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-wait": "0.0.2"
   },
   "dependencies": {}

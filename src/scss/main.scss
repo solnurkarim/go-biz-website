@@ -1,10 +1,17 @@
+@import "config";
 @import "media";
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "feature-panel";
+@import "nav";
+@import "carousel";
+@import "franchise";
+@import "interview";
+@import "offer-sales";
+@import "companies";
+@import "news";
+@import "training";
+@import "section";
+@import "aside";
+@import "footer";
 
 // заменить на необходимые элементы
 * {
@@ -13,9 +20,20 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin: 0;
   color: rgb(56, 56, 56);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  clear: both;
+  margin: 10px 30px;
+  opacity: 0.2;
 }
 
 .feature-panel,
@@ -25,159 +43,37 @@ body {
   display: grid;
 }
 
-.feature-panel {
-  grid-template-columns: 180px 3fr 2fr 3fr 5fr 2fr 5fr;
+main {
+  clear: both;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 500px;
 
-  > div {
-    border-right: 1px solid #f3f3f3;
-    @include flex-center();
+  .main-left {
+    grid-column: 1 / 2;
+  }
+
+  .main-right {
+    grid-column: 2 / 3;
+  }
+
+  footer {
+    grid-column: 1 / 3;
+  }
+
+  .adds-main {
+    clear: both;
+    margin: 20px 0;
 
     img {
-      height: 15px;
-    }
-
-    div {
-      margin: 0 5px 0 5px;
-    }
-  }
-
-  #brand {
-    // background: url("../images/logo.png") no-repeat center left;
-    // background-size: 50%;
-    justify-content: flex-start;
-    margin-left: 30px;
-    img {
-      width: 120px;
-      height: auto;
-    }
-  }
-
-  #location {
-    &-region {
-      cursor: pointer;
-    }
-  }
-
-  #currency {
-    img {
-      height: 10px;
-    }
-
-    #usd,
-    #eur,
-    #rub {
-      @include flex-center();
-    }
-  }
-
-  #search {
-    &-input {
-      border: 1px solid #e1e1e1;
-      outline: none;
-      width: 70%;
-      padding: 5px 10px;
-      margin-right: 10px;
-      box-shadow: 2px 2px 5px #e1e1e1;
-    }
-
-    &-submit {
-      cursor: pointer;
-      border: none;
-      outline: none;
-      background: url(../images/icons/psd-imageslayer_351.png) no-repeat 50% 50%;
-      background-size: cover;
-      height: 15px;
-      width: 15px;
-      margin: 0;
-      // transition: 0.3s ease-out;
-
-      &:hover {
-        transform: scale(1.3, 1.3);
-        // transition: 0.3s ease-out;
-      }
-    }
-  }
-
-  #language {
-    #rus,
-    #kaz {
-      cursor: pointer;
-      color: #a5a5a5;
-
-      &.language-active {
-        color: #000;
-        font-weight: bold;
-      }
-    }
-  }
-
-  #auth {
-    &-img {
-      height: 35px;
-      width: 35px;
-      background: url(../images/psd-imageslayer_335.png) no-repeat;
-      background-size: cover;
-    }
-
-    &-img,
-    &-name,
-    &-settings,
-    &-logout {
-      cursor: pointer;
-    }
-
-    &-settings {
-      background: url(../images/icons/psd-imageslayer_338.png) no-repeat;
-    }
-
-    &-logout {
-      background: url(../images/icons/psd-imageslayer_337.png) no-repeat;
-    }
-
-    &-settings,
-    &-logout {
-      height: 15px;
-      width: 15px;
-      background-size: cover;
+      max-width: 100%;
     }
   }
 }
 
-.nav {
-  padding: 0 100px 0 30px;
-  border-top: 1px solid #f3f3f3;
-  border-bottom: 1px solid #f3f3f3;
-  grid-template-columns: repeat(10, auto);
-
-  .nav-btn {
-    white-space: nowrap;
-    text-decoration: none;
-    color: rgb(56, 56, 56);
-    @include flex-center();
-
-    &:first-child {
-      justify-content: flex-start;
-    }
-
-    &.active span:after,
-    &:hover span:after {
-      content: "";
-      height: 3px;
-      background: rgb(224, 69, 69);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    &.active {
-      font-weight: bold;
-      color: #000;
-    }
-
-    span {
-      line-height: 50px;
-      position: relative;
-    }
+.offices .section-slider {
+  .owl-item {
+    overflow: hidden;
+    border-radius: 10px !important;
   }
 }

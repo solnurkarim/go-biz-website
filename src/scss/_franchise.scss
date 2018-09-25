@@ -1,0 +1,16 @@
+.franchise {
+  hr {
+    margin: 10px 0 30px 0;
+  }
+  .section-slider {
+    height: 200px !important;
+
+    .owl-item {
+      height: 200px !important;
+
+      .slider-item {
+        height: 100%;
+      }
+    }
+  }
+}

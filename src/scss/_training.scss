@@ -1,0 +1,76 @@
+.training {
+  height: 400px;
+
+  .courses {
+    width: 100%;
+    height: 360px;
+
+    .course {
+      float: left;
+      padding: 20px;
+      border: 1px solid rgba(199, 199, 199, 0.294);
+      border-radius: 8px;
+      width: calc((100% - 90px) / 4);
+      height: auto;
+      background-color: #fff;
+
+      &:nth-child(-n + 3) {
+        margin-right: 30px;
+      }
+
+      .specialization {
+        display: inline-block;
+        padding: 3px 10px;
+        font-size: 0.9em;
+        color: #fff;
+        border-radius: 5px;
+        vertical-align: middle;
+        margin-bottom: 30px;
+
+        @at-root {
+          .course:nth-child(1) .specialization {
+            background-color: #ffac4a;
+          }
+
+          .course:nth-child(2) .specialization {
+            background-color: #656cf5;
+          }
+
+          .course:nth-child(3) .specialization,
+          .course:nth-child(4) .specialization {
+            background-color: #5ac2e9;
+          }
+        }
+      }
+
+      .img-wrapper {
+        max-width: 100%;
+        height: 100px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .details {
+        opacity: 0.8;
+        font-size: 0.9em;
+        margin-bottom: 20px;
+      }
+
+      .price {
+        color: #f33939;
+        font-weight: 800;
+        font-size: 1.4em;
+      }
+    }
+  }
+}

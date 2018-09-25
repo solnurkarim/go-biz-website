@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var concatTo = require("gulp-concat");
-var jsmin = require("gulp-uglify");
+var jsmin = require("gulp-babel-minify");
 var sass = require("gulp-sass");
 var cssmin = require("gulp-csso");
 var combine = require("combined-stream");
@@ -8,9 +8,10 @@ var browserSync = require("browser-sync").create();
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var wait = require("gulp-wait");
+var srcmaps = require("gulp-sourcemaps");
 
 gulp.task("js", function() {
-  let src = gulp.src("src/js/*.js").pipe(jsmin());
+  let src = gulp.src("src/js/*.js");
 
   let vendors = gulp.src([
     "src/vendors/jquery-3.3.1.min.js",
@@ -22,7 +23,9 @@ gulp.task("js", function() {
   all.append(src);
 
   return all
+    .pipe(srcmaps.init())
     .pipe(concatTo("all.min.js"))
+    .pipe(srcmaps.write())
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
 });
@@ -30,7 +33,7 @@ gulp.task("js", function() {
 gulp.task("css", function() {
   let src = gulp
     .src("src/scss/*.scss")
-    .pipe(wait(50))
+    .pipe(wait(200))
     .pipe(sass().on("error", sass.logError))
     .pipe(cssmin())
     .pipe(
@@ -41,10 +44,7 @@ gulp.task("css", function() {
       ])
     );
 
-  let vendors = gulp.src([
-    "src/vendors/owl.carousel.min.css",
-    "src/vendors/owl.theme.default.min.css"
-  ]);
+  let vendors = gulp.src(["src/vendors/owl.carousel.min.css"]);
 
   let all = combine.create();
   all.append(vendors);

@@ -1,0 +1,48 @@
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .arrow-left,
+  .arrow-right {
+    cursor: pointer;
+    z-index: 10;
+    margin-right: 7px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .arrow-left:after,
+  .arrow-right:after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-bottom: 2px solid #f33939;
+  }
+
+  .arrow-left:after {
+    transform: rotate(45deg) translateX(15px);
+    border-left: 2px solid #f33939;
+  }
+
+  .arrow-right:after {
+    transform: rotate(-45deg) translatey(15px);
+    border-right: 2px solid #f33939;
+  }
+}
+
+.carousel-area .right {
+  .carousel-controls {
+    bottom: 15px;
+    right: 10px;
+  }
+}

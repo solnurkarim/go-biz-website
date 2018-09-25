@@ -1,0 +1,117 @@
+.feature-panel {
+  grid-template-columns: 180px 3fr 2fr 3fr 5fr 2fr 5fr;
+
+  > div {
+    border-right: 1px solid $border-color;
+    @include flex-center();
+
+    img {
+      height: 18px;
+    }
+
+    div {
+      margin: 0 5px 0 5px;
+    }
+  }
+
+  #brand {
+    justify-content: flex-start;
+    margin-left: 30px;
+    cursor: pointer;
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  #location {
+    &-region {
+      cursor: pointer;
+    }
+  }
+
+  #currency {
+    img {
+      height: 12px;
+    }
+
+    #usd,
+    #eur,
+    #rub {
+      @include flex-center();
+    }
+  }
+
+  #search {
+    &-input {
+      border: 1px solid #e1e1e1;
+      outline: none;
+      width: 70%;
+      padding: 5px 10px;
+      margin-right: 10px;
+      box-shadow: 2px 2px 5px #e1e1e1;
+    }
+
+    &-submit {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: url(../images/icons/psd-imageslayer_351.png) no-repeat 50% 50%;
+      background-size: cover;
+      height: 20px;
+      width: 20px;
+      margin: 0;
+      // transition: 0.3s ease-out;
+
+      &:hover {
+        // transform: scale(1.3, 1.3);
+        // transition: 0.3s ease-out;
+      }
+    }
+  }
+
+  #language {
+    #rus,
+    #kaz {
+      cursor: pointer;
+      color: #a5a5a5;
+
+      &.language-active {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+  }
+
+  #auth {
+    &-img {
+      height: 40px;
+      width: 40px;
+      background: url(../images/psd-imageslayer_335.png) no-repeat;
+      background-size: cover;
+    }
+
+    &-img,
+    &-name,
+    &-settings,
+    &-logout {
+      cursor: pointer;
+    }
+
+    &-settings {
+      background: url(../images/icons/psd-imageslayer_338.png) no-repeat;
+    }
+
+    &-logout {
+      background: url(../images/icons/psd-imageslayer_337.png) no-repeat;
+    }
+
+    &-settings,
+    &-logout {
+      height: 18px;
+      width: 18px;
+      background-size: 100%;
+    }
+  }
+}

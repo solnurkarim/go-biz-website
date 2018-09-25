@@ -1,0 +1,44 @@
+.nav {
+  padding: 0 100px 0 30px;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  grid-template-columns: repeat(10, auto);
+
+  .nav-btn {
+    white-space: nowrap;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    @include flex-center();
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &.active span:after,
+    &:hover span:after {
+      background: rgb(224, 69, 69);
+      width: 55%;
+      transition: 0.2s ease;
+    }
+
+    span:after {
+      content: "";
+      height: 4px;
+      background: transparent;
+      display: block;
+      margin: -4px auto 0 auto;
+      width: 0;
+      transition: 0.2s ease;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: #000;
+    }
+
+    span {
+      line-height: 50px;
+      position: relative;
+    }
+  }
+}
