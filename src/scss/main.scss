@@ -4,6 +4,7 @@
 @import "nav";
 @import "carousel";
 @import "franchise";
+@import "offices";
 @import "interview";
 @import "offer-sales";
 @import "companies";
@@ -13,8 +14,10 @@
 @import "aside";
 @import "footer";
 
-// заменить на необходимые элементы
-* {
+div,
+p,
+a,
+nav {
   box-sizing: border-box;
 }
 
@@ -32,7 +35,7 @@ a {
 
 hr {
   clear: both;
-  margin: 10px 30px;
+  margin: 10px 0 10px 30px;
   opacity: 0.2;
 }
 

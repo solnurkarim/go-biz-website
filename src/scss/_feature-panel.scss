@@ -51,6 +51,9 @@
       padding: 5px 10px;
       margin-right: 10px;
       box-shadow: 2px 2px 5px #e1e1e1;
+      height: 40px;
+      color: #555555;
+      font-size: 1.1em;
     }
 
     &-submit {
@@ -85,11 +88,19 @@
   }
 
   #auth {
+    width: 100%;
+    position: relative;
+    height: 100%;
+
     &-img {
       height: 40px;
       width: 40px;
       background: url(../images/psd-imageslayer_335.png) no-repeat;
       background-size: cover;
+    }
+
+    &-name {
+      margin-right: 30px;
     }
 
     &-img,
@@ -99,16 +110,25 @@
       cursor: pointer;
     }
 
+    &-actions {
+      position: absolute;
+      display: block;
+      right: 30px;
+      margin: 0;
+    }
+
     &-settings {
       background: url(../images/icons/psd-imageslayer_338.png) no-repeat;
     }
 
     &-logout {
       background: url(../images/icons/psd-imageslayer_337.png) no-repeat;
+      margin-right: 0;
     }
 
     &-settings,
     &-logout {
+      display: inline-block;
       height: 18px;
       width: 18px;
       background-size: 100%;

@@ -1,0 +1,18 @@
+.offices {
+  .slider-item {
+    cursor: pointer;
+
+    &:hover {
+      .slider-item-caption {
+        background-color: transparent !important;
+        transition: 0.3s ease;
+      }
+
+      img {
+        zoom: 2;
+        transform: scale(1.1);
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+}

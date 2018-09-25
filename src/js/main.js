@@ -108,3 +108,32 @@ $(".offices .arrow-right").click(function() {
     .trigger("stop.owl.autoplay")
     .trigger("play.owl.autoplay");
 });
+
+var videoItemLeft = document.getElementById("video-play");
+var btnRight = document.getElementById("video-play").children[0].children[0];
+
+function loadVideo(videoItemThis) {
+  var videoThis = videoItemThis.children[0].children[1];
+  var videoLeft = videoItemLeft.children[0].children[1];
+  var btnLeft = videoItemLeft.children[0].children[0];
+
+  // если воспроизводится то же видео, то убрать кнопку и возпроизвести либо остановить
+  if (videoThis.children[0].src === videoLeft.children[0].src) {
+    btnLeft.classList.remove("video-btn");
+    videoLeft.setAttribute("controls", "null");
+    videoLeft.paused == true ? videoLeft.play() : videoLeft.pause();
+    return;
+  }
+
+  btnRight.classList.remove("hide-btn");
+  btnRight = videoItemThis.children[0].children[0];
+  btnRight.classList.toggle("hide-btn");
+
+  // вывести видео в область воспроизведения
+  videoItemLeft.innerHTML = videoItemThis.innerHTML;
+
+  // настроить новое видео и запустить
+  videoLeft = videoItemLeft.children[0].children[1];
+  videoLeft.setAttribute("controls", "null");
+  videoLeft.play();
+}

@@ -24,7 +24,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
-        border-radius: 10px;
+        box-shadow: 0 0 2px #000;
       }
 
       .desc {
@@ -50,6 +50,9 @@
       }
 
       &:first-child {
+        border-radius: 10px;
+        overflow: hidden;
+
         .desc {
           position: absolute;
           height: 100%;
@@ -68,7 +71,7 @@
       }
 
       &:nth-child(n + 2) {
-        padding-left: 15px;
+        padding-left: 5px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -84,6 +87,7 @@
         img {
           width: 40%;
           height: 100%;
+          padding: 1px;
         }
       }
 

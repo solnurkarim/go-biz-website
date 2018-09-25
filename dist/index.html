@@ -2,7 +2,6 @@
 <html lang="ru">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/all.min.css">
@@ -42,7 +41,6 @@
         <div id="search">
             <input type="search" id="search-input" placeholder="Найти...">
             <button type="submit" id="search-submit"></button>
-            <!-- <img src="./images/icons/psd-imageslayer_351.png" alt="лупа"> -->
         </div>
         <div id="language">
             <div id="rus" class="language-active">Рус</div>
@@ -51,8 +49,10 @@
         <div id="auth">
             <div id="auth-img"></div>
             <div id="auth-name">Данияр Каирбеков</div>
-            <div id="auth-settings"></div>
-            <div id="auth-logout"></div>
+            <div id="auth-actions">
+                <div id="auth-settings"></div>
+                <div id="auth-logout"></div>
+            </div>
         </div>
     </div>
     <nav class="nav">
@@ -415,13 +415,17 @@
                 </div>
                 <div class="section-videos">
                     <div class="left">
-                        <div class="video-item">
-                            <video preload="metadata" class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                        <div class="video-item" id="video-play">
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -432,12 +436,16 @@
                     </div>
                     <div class="right">
                         <div class="video-item">
-                            <video preload="metadata" class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -447,12 +455,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/demo2.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -462,12 +474,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -477,12 +493,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/demo2.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -492,12 +512,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -507,12 +531,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontcrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/demo.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -522,12 +550,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontcrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -537,12 +569,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontcrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/demo.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -552,12 +588,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontcrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/elon.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>
@@ -567,12 +607,16 @@
 
                         </div>
                         <div class="video-item">
-                            <video preload="metadata" ontcrols class="video">
-                                <source src="videos/elon.mp4" type="video/mp4">
-                                Данный формат видео не поддерживается вашим браузером.
-                            </video>
+                            <div class="video-wrapper">
+                                <div onclick="loadVideo(this.parentElement.parentElement)" class="video-btn"></div>
+                                <video preload="metadata" class="video">
+                                    <source src="videos/demo.mp4" type="video/mp4">
+                                    Данный формат видео не поддерживается вашим браузером.
+                                </video>
+                            </div>
                             <div class="video-desc">
-                                <h3 class="video-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                <h3 onclick="loadVideo(this.parentElement.parentElement)" class="video-title">Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit.</h3>
                                 <div class="video-data">
                                     <div class="posted">11 сентября, 2018г.</div>
                                     <div class="comments">5</div>

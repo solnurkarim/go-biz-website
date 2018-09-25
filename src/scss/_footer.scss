@@ -31,6 +31,13 @@ footer {
       color: inherit;
       text-decoration: underline;
       cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        transition: 0.3s ease;
+        color: #fff;
+        opacity: 1;
+      }
     }
 
     .site-creators {
@@ -46,6 +53,12 @@ footer {
       display: block;
       color: #fff;
       margin-bottom: 10px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transition: 0.3s ease;
+        color: #f33939;
+      }
     }
 
     h2 {
